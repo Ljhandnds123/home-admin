@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+	<title>酒仙网后台</title>
+	<link rel="stylesheet" type="text/css" href="../public/bs/css/bootstrap.min.css">
+	<script type="text/javascript" src="../public/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../public/bs/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../public/js/jquery.toggle.js"></script>
+	<style type="text/css">
+
+		body{
+			font-family: 微软雅黑;
+			padding: 70px;
+		}
+		.navbar-brand{
+			color:white !important;
+			font-weight: bold;
+		}
+		.panel-group{
+			width:150px;
+		}
+		
+		.modal-body{
+			margin-left: 150px;
+		}
+	</style>
+
+
+
+</head>
+<body>
+   <div class="container">
+	 <nav class="navbar navbar-inverse  navbar-fixed-top">
+	   <div class="container">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="#">酒仙网后台</a>
+	    </div>
+
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">    
+	      <ul class="nav navbar-nav navbar-right">
+	        <li><a href="../index.html" target="_blank">首页</a></li>
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">后台管理 <span class="caret"></span></a>
+	          <ul class="dropdown-menu">
+	            <li><a href="#">admin</a></li>
+	            <li class="divider"></li>
+	            <li><a href="#" data-toggle="modal" data-target=
+	            "#mymodal">修改密码</a></li>
+	            <li role="separator" class="divider"></li>
+	            <li><a href="#">退出</a></li>
+	          </ul>
+	        </li>
+	      </ul>
+	    </div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+	</nav>
+
+    <div class="panel-group col-md-2" id="accordion" role="tablist" >
+	  <div class="panel panel-primary">
+	    <div class="panel-heading" role="tab" id="headingOne">
+	      <h4 class="panel-title">
+	        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+	           会员管理
+	        </a>
+	      </h4>
+	    </div>
+	    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+	      <div class="list-group">
+	         <li class="list-group-item">会员查询</li>
+	         <li class="list-group-item">会员添加</li>
+	         <li class="list-group-item">会员修改</li>
+	         <li class="list-group-item">会员删除</li>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="panel panel-success">
+	    <div class="panel-heading" role="tab" id="headingTwo">
+	      <h4 class="panel-title">
+	        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                广告管理
+	        </a>
+	      </h4>
+	    </div>
+	    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+	      <div class="list-group">
+	         <li class="list-group-item">广告查看</li>
+	         <li class="list-group-item">广告添加</li>
+	         <li class="list-group-item">广告修改</li>
+	         <li class="list-group-item">广告删除</li>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="panel panel-info">
+	    <div class="panel-heading" role="tab" id="headingThree">
+	      <h4 class="panel-title">
+	        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+	          品牌管理
+	        </a>
+	      </h4>
+	    </div>
+	    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+	      <div class="list-group">
+	         <li class="list-group-item">品牌查看</li>
+	         <li class="list-group-item">品牌管理</li>
+	         <li class="list-group-item">品牌修改</li>
+	         <li class="list-group-item">品牌删除</li>
+	      </div>
+	    </div>
+	  </div>
+	   <div class="panel panel-warning">
+	    <div class="panel-heading" role="tab" id="heading4">
+	      <h4 class="panel-title">
+	        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse4" aria-expanded="false" aria-controls="collapse4">
+	          分类管理
+	        </a>
+	      </h4>
+	    </div>
+	    <div id="collapse4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading4">
+	      <div class="list-group">
+	         <li class="list-group-item">分类查看</li>
+	         <li class="list-group-item">分类管理</li>
+	         <li class="list-group-item">分类修改</li>
+	         <li class="list-group-item">分类删除</li>
+	      </div>
+	    </div>
+	  </div>
+	   <div class="panel panel-danger">
+	    <div class="panel-heading" role="tab" id="heading5">
+	      <h4 class="panel-title">
+	        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse5" aria-expanded="false" aria-controls="collapse5">
+	          商品管理
+	        </a>
+	      </h4>
+	    </div>
+	    <div id="collapse5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading5">
+	      <div class="list-group">
+	         <li class="list-group-item">商品查看</li>
+	         <li class="list-group-item">商品管理</li>
+	         <li class="list-group-item">商品修改</li>
+	         <li class="list-group-item">商品删除</li>
+	      </div>
+	    </div>
+	  </div>
+	   <div class="panel panel-primary">
+	    <div class="panel-heading" role="tab" id="heading6">
+	      <h4 class="panel-title">
+	        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse6" aria-expanded="false" aria-controls="collapse6">
+	          评论管理
+	        </a>
+	      </h4>
+	    </div>
+	    <div id="collapse6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading6">
+	      <div class="list-group">
+	         <li class="list-group-item">评论查看</li>
+	         <li class="list-group-item">评论管理</li>
+	         <li class="list-group-item">评论修改</li>
+	         <li class="list-group-item">评论删除</li>
+	      </div>
+	    </div>
+	  </div>
+	   <div class="panel panel-success">
+	    <div class="panel-heading" role="tab" id="heading6">
+	      <h4 class="panel-title">
+	        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse7" aria-expanded="false" aria-controls="collapse7">
+	          订单管理
+	        </a>
+	      </h4>
+	    </div>
+	    <div id="collapse7" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading7">
+	      <div class="list-group">
+	         <li class="list-group-item">订单查看</li>
+	         <li class="list-group-item">订单管理</li>
+	         <li class="list-group-item">订单修改</li>
+	         <li class="list-group-item">订单删除</li>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+
+  <div class="col-md-10">
+    <div class="thumbnail">
+      <img src="public/img/2.jpg"  style="height:350px;width:100%">
+      <div class="caption">
+        <h3>酒仙网后台信息</h3>
+        <p>联系方式 17774002259</p>
+        <p><a href="../index.html" target="_blank" class="btn btn-info" role="button">网站首页</a> <a href="#" class="btn btn-danger" role="button">退出系统</a></p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="modal fade" tabindex="2" role="dialog" id="mymodal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">密码修改</h4>
+      </div>
+      <div class="modal-body">
+        <form  >
+            <div class ="input-group">
+	        	<label>会员账号:</label><input class="form-control" type="text" name="username" placeholder="账号"><br>
+	        	<label>会员密码:</label><input class="form-control" type="password" name="password" placeholder="旧密码"><br>
+	        	 <label>  新密码:</label><input class="form-control" type="password" name="newpassword" placeholder="新密码"><br>
+	        	<label>确认密码:</label><input class="form-control" type="password" name="prepassword" placeholder="请确认密码"><br>
+        	</div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-primary">确认</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+   </div>
+</body>
+</html>
